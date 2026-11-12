@@ -1,7 +1,29 @@
+# Informations générales du projet
+title: InformsLabs
+description: Une sélection de référence des meilleurs outils, bases de données et plateformes en informatique des matériaux (Materials Informatics).
+lang: fr-FR
+
+# Thème GitHub Pages (optionnel mais recommandé pour un rendu propre)
+# Exemples populaires : jekyll-theme-cayman, jekyll-theme-primer, jekyll-theme-slate
+theme: jekyll-theme-primer
+
+# Plugins pour GitHub Pages
 plugins:
   - jekyll-relative-links
+  - jekyll-seo-tag
+
+# Configuration des liens relatifs (permet la navigation fluide entre README et CONTRIBUTING)
 relative_links:
   enabled: true
   collections: true
+
+# Fichiers Markdown racine à inclure dans la génération du site
 include:
   - README.md
+  - CONTRIBUTING.md
+
+# Fichiers à ignorer lors de la génération du site web
+exclude:
+  - CITATION.cff
+  - .github/
+  - LICENSE
