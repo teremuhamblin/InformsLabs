@@ -1,26 +1,28 @@
 cff-version: 1.2.0
-title: Awesome Materials Informatics
+message: "Si vous utilisez ou citez cette ressource, merci de la mentionner comme ci-dessous."
+title: "InformsLabs: Ressources et outils en informatique des matériaux"
+abstract: "Une sélection curée de logiciels, jeux de données, plateformes et standards pour la science des matériaux assistée par les données et l'IA."
 type: dataset
 license: CC0-1.0
 authors:
-  - given-names: Evgeny
-    family-names: Blokhin
-    orcid: 'https://orcid.org/0000-0002-5333-3947'
-doi: 10.5281/zenodo.7693349
-url: 'https://github.com/tilde-lab/awesome-materials-informatics'
+  - name: "InformsLabs"
+    # Si vous préférez citer une personne physique :
+    # given-names: "TheMadDoG.tmdg"
+    # family-names: "TMDG"
+    # orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"
+repository-code: "https://github.com/teremuhamblin/InformsLabs"
+url: "https://github.com/teremuhamblin/InformsLabs"
+# doi: "10.5281/zenodo.XXXXXXX" # Décommentez et ajoutez votre propre DOI Zenodo si vous en créez un
 keywords:
-  - data science
-  - materials science
-  - chemistry
-  - crystallography
-  - crystal structure
-  - ab initio
-  - materials informatics
-  - materials platform
-  - phase diagram
-  - atomistic simulations
-  - materials discovery
-  - materials design
-  - materials genome
-  - materials dataset
-  - computational materials engineering
+  - "materials informatics"
+  - "informatique des matériaux"
+  - "data science"
+  - "materials science"
+  - "machine learning"
+  - "chemistry"
+  - "crystallography"
+  - "ab initio"
+  - "density functional theory"
+  - "atomistic simulations"
+  - "materials discovery"
+  - "computational materials engineering"
