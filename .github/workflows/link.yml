@@ -1,0 +1,22 @@
+name: Vérification des liens
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 8 * * 1' # Tous les lundis matin à 08:00 UTC
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+
+      - name: Vérification des URLs avec Lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress './README.md'
+          fail: true
