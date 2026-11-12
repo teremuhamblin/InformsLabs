@@ -1,0 +1,43 @@
+name: Suggérer une nouvelle ressource
+description: Proposer l'ajout d'une bibliothèque, base de données ou plateforme dans InformsLabs.
+title: "[Suggestion] : "
+labels: ["enhancement", "ressource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de participer à l'enrichissement d'**InformsLabs** !
+  - type: input
+    id: nom
+    attributes:
+      label: Nom de la ressource
+      placeholder: "Ex: MACE, Jarvis, Quacc..."
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Lien URL vers le projet ou dépôt
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: Section suggérée
+      options:
+        - "Simulation & Workflows"
+        - "Graphes de neurones & MLIP"
+        - "Analyse & Machine Learning"
+        - "Modèles de fondation / Plateformes IA"
+        - "Bases de données"
+        - "Standards et interopérabilité"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description courte (1 ou 2 phrases en français)
+      placeholder: "Expliquez ce que fait cet outil et pourquoi il est pertinent pour l'informatique des matériaux."
+    validations:
+      required: true
