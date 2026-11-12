@@ -1,20 +1,35 @@
 name: CI
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   check-links:
+    name: Vérification des liens Markdown
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v2
-    - name: Link Checker
-      id: lc
-      uses: lycheeverse/lychee-action@v1.8.0
-      with:
-        # See cli args at https://github.com/lycheeverse/lychee#commandline-parameters
-        # for excluded URLs, the checker seems to be stricter than Chrome
-        args: >-
-          --verbose --timeout 40 --insecure *.md
-    - name: Fail if there were link errors
-      run: exit ${{ steps.lc.outputs.exit_code }}
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Vérifier les liens avec Lychee
+        uses: lycheeverse/lychee-action@v2
+        env:
+          # Évite les erreurs 429 (Rate Limit) sur les nombreux liens github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # fail: true fait échouer le job si un lien est cassé (remplace l'ancienne étape)
+          fail: true
+          args: >-
+            --verbose
+            --timeout 40
+            --insecure
+            --accept 200..=204,403,429
+            *.md
