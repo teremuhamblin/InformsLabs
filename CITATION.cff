@@ -6,23 +6,15 @@ type: dataset
 license: CC0-1.0
 authors:
   - name: "InformsLabs"
-    # Si vous préférez citer une personne physique :
-    # given-names: "TheMadDoG.tmdg"
-    # family-names: "TMDG"
-    # orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"
 repository-code: "https://github.com/teremuhamblin/InformsLabs"
 url: "https://github.com/teremuhamblin/InformsLabs"
-# doi: "10.5281/zenodo.XXXXXXX" # Décommentez et ajoutez votre propre DOI Zenodo si vous en créez un
 keywords:
   - "materials informatics"
   - "informatique des matériaux"
   - "data science"
   - "materials science"
   - "machine learning"
-  - "chemistry"
   - "crystallography"
   - "ab initio"
   - "density functional theory"
-  - "atomistic simulations"
   - "materials discovery"
-  - "computational materials engineering"
